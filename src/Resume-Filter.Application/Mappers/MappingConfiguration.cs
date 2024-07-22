@@ -7,6 +7,7 @@ using Resume_Filter.Application.UseCases.Commands.HR;
 using Resume_Filter.Application.UseCases.Commands.Property;
 using Resume_Filter.Application.UseCases.Commands.Vacancy;
 using Resume_Filter.Domain.Entities.HR;
+using Resume_Filter.Domain.Entities.Property;
 using Resume_Filter.Domain.Entities.Vacancy;
 
 namespace Resume_Filter.Application.Mappers;
@@ -28,7 +29,7 @@ public class MappingConfiguration:Profile
 
         CreateMap<CreateVacancy, Vacancies>().ReverseMap();
         CreateMap<CreateRecruiter, Recruiter>().ReverseMap();
-        CreateMap<CreateProperty, Property>().ReverseMap();
+        CreateMap<CreateProperty, Properties>().ReverseMap();
     }
 }
 
