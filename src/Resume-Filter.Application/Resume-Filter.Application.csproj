@@ -10,6 +10,21 @@
     <None Remove="Abstractions\" />
     <None Remove="UseCases\" />
     <None Remove="Mappers\" />
+    <None Remove="UseCases\Commands\" />
+    <None Remove="UseCases\Handlers\" />
+    <None Remove="UseCases\Queries\" />
+    <None Remove="UseCases\Commands\HR\" />
+    <None Remove="UseCases\Commands\Vacancy\" />
+    <None Remove="UseCases\Commands\Property\" />
+    <None Remove="UseCases\Handlers\HR\" />
+    <None Remove="UseCases\Handlers\Vacancy\" />
+    <None Remove="UseCases\Handlers\Property\" />
+    <None Remove="UseCases\Queries\HR\" />
+    <None Remove="UseCases\Queries\Vacancy\" />
+    <None Remove="UseCases\Queries\Property\" />
+    <None Remove="DTO\Vacancy\" />
+    <None Remove="DTO\Property\" />
+    <None Remove="DTO\HR\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Interfaces\" />
@@ -17,11 +32,32 @@
     <Folder Include="Abstractions\" />
     <Folder Include="UseCases\" />
     <Folder Include="Mappers\" />
+    <Folder Include="UseCases\HR\" />
+    <Folder Include="UseCases\" />
+    <Folder Include="UseCases\" />
+    <Folder Include="UseCases\" />
+    <Folder Include="UseCases\Commands\" />
+    <Folder Include="UseCases\Handlers\" />
+    <Folder Include="UseCases\Queries\" />
+    <Folder Include="UseCases\Commands\HR\" />
+    <Folder Include="UseCases\Commands\Vacancy\" />
+    <Folder Include="UseCases\Commands\Property\" />
+    <Folder Include="UseCases\Handlers\HR\" />
+    <Folder Include="UseCases\Handlers\Vacancy\" />
+    <Folder Include="UseCases\Handlers\Property\" />
+    <Folder Include="UseCases\Queries\HR\" />
+    <Folder Include="UseCases\Queries\Vacancy\" />
+    <Folder Include="UseCases\Queries\Property\" />
+    <Folder Include="DTO\Vacancy\" />
+    <Folder Include="DTO\Property\" />
+    <Folder Include="DTO\HR\" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Microsoft.EntityFrameworkCore" Version="8.0.7" />
     <PackageReference Include="MediatR" Version="11.0.0" />
     <PackageReference Include="MediatR.Extensions.Microsoft.DependencyInjection" Version="11.0.0" />
+    <PackageReference Include="AutoMapper" Version="12.0.1" />
+    <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="12.0.1" />
   </ItemGroup>
   <PropertyGroup>
     <TargetFramework>net8.0</TargetFramework>
