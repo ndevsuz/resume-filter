@@ -6,11 +6,22 @@
 
   <ItemGroup>
     <None Remove="Interfaces\" />
-    <None Remove="Services\" />
+    <None Remove="DTO\" />
+    <None Remove="Abstractions\" />
+    <None Remove="UseCases\" />
+    <None Remove="Mappers\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Interfaces\" />
-    <Folder Include="Services\" />
+    <Folder Include="DTO\" />
+    <Folder Include="Abstractions\" />
+    <Folder Include="UseCases\" />
+    <Folder Include="Mappers\" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="8.0.7" />
+    <PackageReference Include="MediatR" Version="11.0.0" />
+    <PackageReference Include="MediatR.Extensions.Microsoft.DependencyInjection" Version="11.0.0" />
   </ItemGroup>
   <PropertyGroup>
     <TargetFramework>net8.0</TargetFramework>
