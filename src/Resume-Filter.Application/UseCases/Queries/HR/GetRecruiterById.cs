@@ -1,7 +1,10 @@
-﻿namespace Resume_Filter.Application.UseCases.Queries.HR;
+﻿using MediatR;
+using Resume_Filter.Domain.Entities.HR;
 
-public class GetRecruiterById
+namespace Resume_Filter.Application.UseCases.Queries.HR;
+
+public class GetRecruiterById:IRequest<Recruiter>
 {
-
+    public int Id { get; set; }
 }
 

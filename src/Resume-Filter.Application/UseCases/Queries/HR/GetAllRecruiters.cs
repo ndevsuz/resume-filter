@@ -1,6 +1,9 @@
-﻿namespace Resume_Filter.Application.UseCases.Queries.HR;
+﻿using MediatR;
+using Resume_Filter.Domain.Entities.HR;
 
-public class GetAllRecruiters
+namespace Resume_Filter.Application.UseCases.Queries.HR;
+
+public class GetAllRecruiters:IRequest<List<Recruiter>>
 {
 
 }
