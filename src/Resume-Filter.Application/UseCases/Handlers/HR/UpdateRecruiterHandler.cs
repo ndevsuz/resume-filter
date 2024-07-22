@@ -27,6 +27,7 @@ public class UpdateRecruiterHandler : IRequestHandler<UpdateRecruiter, bool>
             recruiter.FirstName = request.FirstName ?? recruiter.FirstName;
             recruiter.LastName = request.LastName ?? recruiter.LastName;
             recruiter.Email = request.Email ?? recruiter.Email;
+            recruiter.Password = request.Password ?? recruiter.Password;
 
             _applicationDbContext.Recruiters.Update(recruiter);
             var result = await _applicationDbContext.SaveChangesAsync(cancellationToken);
