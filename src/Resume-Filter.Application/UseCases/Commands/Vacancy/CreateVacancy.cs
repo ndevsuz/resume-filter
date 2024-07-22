@@ -6,6 +6,6 @@ public class CreateVacancy:IRequest<bool>
 {
     public string Name { get; set; }
     public string Description { get; set; }
-    public int HR_Id { get; set; }
+    public int RecruiterID { get; set; }
 }
 
