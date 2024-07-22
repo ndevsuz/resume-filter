@@ -1,7 +1,11 @@
-﻿namespace Resume_Filter.Application.UseCases.Commands.HR;
+﻿using MediatR;
 
-public class CreateRecruiter
+namespace Resume_Filter.Application.UseCases.Commands.HR;
+
+public class CreateRecruiter:IRequest<bool>
 {
-
+    public string FirstName { get; set; }
+    public string LastName { get; set; }
+    public string Email { get; set; }
 }
 
