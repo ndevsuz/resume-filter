@@ -1,6 +1,9 @@
-﻿namespace Resume_Filter.Application.UseCases.Queries.Property;
+﻿using MediatR;
+using Resume_Filter.Domain.Entities.Property;
 
-public class GetAllPropertyQuery
+namespace Resume_Filter.Application.UseCases.Queries.Property;
+
+public class GetAllPropertyQuery:IRequest<List<Properties>>
 {
 
 }
