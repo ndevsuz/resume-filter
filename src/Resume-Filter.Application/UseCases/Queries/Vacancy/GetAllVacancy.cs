@@ -1,6 +1,9 @@
-﻿namespace Resume_Filter.Application.UseCases.Queries.Vacancy;
+﻿using MediatR;
+using Resume_Filter.Domain.Entities.Vacancy;
 
-public class GetAllVacancy
+namespace Resume_Filter.Application.UseCases.Queries.Vacancy;
+
+public class GetAllVacancy:IRequest<List<Vacancies>>
 {
 
 }
