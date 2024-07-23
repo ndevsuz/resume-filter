@@ -55,7 +55,6 @@
     <Folder Include="DTO\HR\" />
     <Folder Include="UseCases\Commands\Form\" />
     <Folder Include="UseCases\Handlers\Form\" />
-    <Folder Include="DTO\Form\" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="iTextSharp" Version="5.5.13" />
