@@ -53,6 +53,7 @@
     <Folder Include="DTO\HR\" />
   </ItemGroup>
   <ItemGroup>
+    <PackageReference Include="iTextSharp" Version="5.5.13" />
     <PackageReference Include="Microsoft.EntityFrameworkCore" Version="8.0.7" />
     <PackageReference Include="MediatR" Version="11.0.0" />
     <PackageReference Include="MediatR.Extensions.Microsoft.DependencyInjection" Version="11.0.0" />
