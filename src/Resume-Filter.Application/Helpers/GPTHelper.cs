@@ -5,7 +5,6 @@ namespace Resume_Filter.Application.Helpers;
 
 public static class GPTHelper
 {
-    
     private static readonly string apiUrl = "https://api.openai.com/v1/chat/completions";
     private static string apiKey = "sk-proj-66iLGZpmmlLT7RAjK5bET3BlbkFJN0k6oA941PtgHilLf5QM";
     
@@ -13,7 +12,7 @@ public static class GPTHelper
     {
         using (var client = new HttpClient())
         {
-            client.DefaultRequestHeaders.Add("Authori       zation", $"Bearer {apiKey}");
+            client.DefaultRequestHeaders.Add("Authorization", $"Bearer {apiKey}");
 
             var requestBody = new
             {
@@ -29,7 +28,7 @@ public static class GPTHelper
             var response = await client.PostAsync(apiUrl, content);
             var responseBody = await response.Content.ReadAsStringAsync();
 
-            return responseBody;
+            return responseBody;   
         }
         
     }
