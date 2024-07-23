@@ -13,7 +13,7 @@ public static class GPTHelper
     {
         using (var client = new HttpClient())
         {
-            client.DefaultRequestHeaders.Add("Authorization", $"Bearer {apiKey}");
+            client.DefaultRequestHeaders.Add("Authori       zation", $"Bearer {apiKey}");
 
             var requestBody = new
             {
