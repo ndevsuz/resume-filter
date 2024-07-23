@@ -30,11 +30,17 @@ public class CreateFormHandler:IRequestHandler<CreateForm, bool>
                 VacancyId=request.VacancyId
             };
 
+            string uniqueFileName = string.Empty;
+
             if(request.Resume != null)
             {
-                string UploadFolder = Path.Combine(PathHelper.WebRootPath, "resumes");
+                string UploadFolder = Path.Combine(PathHelper.WebRootPath, "files");
+                uniqueFileName = Guid.NewGuid().ToString() + "_" + request.Resume.FileName;
+                string imageFilePath = Path.Combine(UploadFolder, uniqueFileName);
+                request.Resume.CopyTo(new FileStream(imageFilePath, FileMode.Create));
+                form.Resume = "images/" + uniqueFileName;
             }
-            //Forms form = _mapper.Map<Forms>(request);
+
             await _applicationDbContext.Forms.AddAsync(form);
             var result = await _applicationDbContext.SaveChangesAsync(cancellationToken);
             return result > 0;

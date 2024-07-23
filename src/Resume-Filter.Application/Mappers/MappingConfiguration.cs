@@ -1,4 +1,5 @@
 ﻿using AutoMapper;
+using Resume_Filter.Application.DTO.Form;
 using Resume_Filter.Application.DTO.HR;
 using Resume_Filter.Application.DTO.Property;
 using Resume_Filter.Application.DTO.Vacancy;
@@ -25,6 +26,8 @@ public class MappingConfiguration:Profile
 
         CreateMap<CreateVacancy, CreateVacancyDTO>().ReverseMap();
         CreateMap<UpdateVacancy, UpdateVacancyDTO>().ReverseMap();
+
+        CreateMap<CreateForm, CreateFormDTO>().ReverseMap();
 
         //---------------
 
