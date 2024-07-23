@@ -3,6 +3,7 @@ using MediatR;
 using Resume_Filter.Application.Abstractions;
 using Resume_Filter.Application.UseCases.Commands.Form;
 using Microsoft.AspNetCore.Http;
+using Resume_Filter.Application.Helpers;
 using Resume_Filter.Domain.Entities.Form;
 
 namespace Resume_Filter.Application.UseCases.Handlers.Form;
@@ -10,7 +11,6 @@ namespace Resume_Filter.Application.UseCases.Handlers.Form;
 public class CreateFormHandler:IRequestHandler<CreateForm, bool>
 {
     private readonly IApplicationDbContext _applicationDbContext;
-    private readonly IWebHostEnvironment _webHostEnvironment;
     private readonly IMapper _mapper;
 
     public CreateFormHandler(IApplicationDbContext applicationDbContext, IMapper mapper)
@@ -32,7 +32,7 @@ public class CreateFormHandler:IRequestHandler<CreateForm, bool>
 
             if(request.Resume != null)
             {
-                string UploadFolder = Path.Combine()
+                string UploadFolder = Path.Combine(PathHelper.WebRootPath, "resumes");
             }
             //Forms form = _mapper.Map<Forms>(request);
             await _applicationDbContext.Forms.AddAsync(form);
