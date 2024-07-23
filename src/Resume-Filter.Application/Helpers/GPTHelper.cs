@@ -7,7 +7,7 @@ public static class GPTHelper
 {
     
     private static readonly string apiUrl = "https://api.openai.com/v1/chat/completions";
-    private static string apiKey = "sk-proj-66iLGZpmmlLT7RAjK5bET3BlbkFJN0k6oA941PtgHilLf5QM";
+    private static string apiKey = "";
     
     public async static Task<string> SendRequest(string request)
     {
