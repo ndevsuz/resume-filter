@@ -1,11 +1,12 @@
 ﻿using AutoMapper;
-using Microsoft.EntityFrameworkCore.Metadata.Internal;
 using Resume_Filter.Application.DTO.HR;
 using Resume_Filter.Application.DTO.Property;
 using Resume_Filter.Application.DTO.Vacancy;
+using Resume_Filter.Application.UseCases.Commands.Form;
 using Resume_Filter.Application.UseCases.Commands.HR;
 using Resume_Filter.Application.UseCases.Commands.Property;
 using Resume_Filter.Application.UseCases.Commands.Vacancy;
+using Resume_Filter.Domain.Entities.Form;
 using Resume_Filter.Domain.Entities.HR;
 using Resume_Filter.Domain.Entities.Property;
 using Resume_Filter.Domain.Entities.Vacancy;
@@ -30,6 +31,7 @@ public class MappingConfiguration:Profile
         CreateMap<CreateVacancy, Vacancies>().ReverseMap();
         CreateMap<CreateRecruiter, Recruiter>().ReverseMap();
         CreateMap<CreateProperty, Properties>().ReverseMap();
+        CreateMap<CreateForm, Forms>().ReverseMap();
     }
 }
 

@@ -3,13 +3,14 @@ using MediatR;
 using Resume_Filter.Application.Abstractions;
 using Resume_Filter.Application.UseCases.Commands.HR;
 using Resume_Filter.Domain.Entities.HR;
-
+ 
 namespace Resume_Filter.Application.UseCases.Handlers.HR;
 
 public class CreateRecruiterHandler : IRequestHandler<CreateRecruiter, bool>
 {
     public readonly IApplicationDbContext _applicationDbContext;
     public readonly IMapper _mapper;
+    
 
     public CreateRecruiterHandler(IApplicationDbContext applicationDbContext, IMapper mapper)
     {

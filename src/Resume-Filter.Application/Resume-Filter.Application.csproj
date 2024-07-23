@@ -25,6 +25,9 @@
     <None Remove="DTO\Vacancy\" />
     <None Remove="DTO\Property\" />
     <None Remove="DTO\HR\" />
+    <None Remove="UseCases\Commands\Form\" />
+    <None Remove="UseCases\Handlers\Form\" />
+    <None Remove="DTO\Form\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Interfaces\" />
@@ -50,6 +53,9 @@
     <Folder Include="DTO\Vacancy\" />
     <Folder Include="DTO\Property\" />
     <Folder Include="DTO\HR\" />
+    <Folder Include="UseCases\Commands\Form\" />
+    <Folder Include="UseCases\Handlers\Form\" />
+    <Folder Include="DTO\Form\" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="iTextSharp" Version="5.5.13" />
@@ -60,6 +66,7 @@
     <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="12.0.1" />
     <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
     <PackageReference Include="System.Net.Http" Version="4.3.4" />
+    <PackageReference Include="Microsoft.AspNetCore.Hosting" Version="2.2.7" />
   </ItemGroup>
   <PropertyGroup>
     <TargetFramework>net8.0</TargetFramework>
