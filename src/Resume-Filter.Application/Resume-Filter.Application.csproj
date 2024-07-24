@@ -15,15 +15,11 @@
     <None Remove="UseCases\Queries\" />
     <None Remove="UseCases\Commands\HR\" />
     <None Remove="UseCases\Commands\Vacancy\" />
-    <None Remove="UseCases\Commands\Property\" />
     <None Remove="UseCases\Handlers\HR\" />
     <None Remove="UseCases\Handlers\Vacancy\" />
-    <None Remove="UseCases\Handlers\Property\" />
     <None Remove="UseCases\Queries\HR\" />
     <None Remove="UseCases\Queries\Vacancy\" />
-    <None Remove="UseCases\Queries\Property\" />
     <None Remove="DTO\Vacancy\" />
-    <None Remove="DTO\Property\" />
     <None Remove="DTO\HR\" />
     <None Remove="UseCases\Commands\Form\" />
     <None Remove="UseCases\Handlers\Form\" />
@@ -43,15 +39,11 @@
     <Folder Include="UseCases\Handlers\" />
     <Folder Include="UseCases\Commands\HR\" />
     <Folder Include="UseCases\Commands\Vacancy\" />
-    <Folder Include="UseCases\Commands\Property\" />
     <Folder Include="UseCases\Handlers\HR\" />
     <Folder Include="UseCases\Handlers\Vacancy\" />
-    <Folder Include="UseCases\Handlers\Property\" />
     <Folder Include="UseCases\Queries\HR\" />
     <Folder Include="UseCases\Queries\Vacancy\" />
-    <Folder Include="UseCases\Queries\Property\" />
     <Folder Include="DTO\Vacancy\" />
-    <Folder Include="DTO\Property\" />
     <Folder Include="DTO\HR\" />
     <Folder Include="UseCases\Commands\Form\" />
   </ItemGroup>

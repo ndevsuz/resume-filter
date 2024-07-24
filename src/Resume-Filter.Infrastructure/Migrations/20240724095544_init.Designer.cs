@@ -11,8 +11,8 @@ using Resume_Filter.Infrastructure.Data;
 namespace Resume_Filter.Infrastructure.Migrations
 {
     [DbContext(typeof(ResumeFilterDbContext))]
-    [Migration("20240722213914_vacancyTableChanged")]
-    partial class vacancyTableChanged
+    [Migration("20240724095544_init")]
+    partial class init
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -23,6 +23,34 @@ namespace Resume_Filter.Infrastructure.Migrations
                 .HasAnnotation("Relational:MaxIdentifierLength", 63);
 
             NpgsqlModelBuilderExtensions.UseIdentityByDefaultColumns(modelBuilder);
+
+            modelBuilder.Entity("Resume_Filter.Domain.Entities.Form.Forms", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("integer");
+
+                    NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("Email")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<string>("FullName")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<string>("Resume")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<int>("VacancyId")
+                        .HasColumnType("integer");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Forms");
+                });
 
             modelBuilder.Entity("Resume_Filter.Domain.Entities.HR.Recruiter", b =>
                 {
@@ -44,32 +72,13 @@ namespace Resume_Filter.Infrastructure.Migrations
                         .IsRequired()
                         .HasColumnType("text");
 
-                    b.HasKey("Id");
-
-                    b.ToTable("Recruiters");
-                });
-
-            modelBuilder.Entity("Resume_Filter.Domain.Entities.Property.Properties", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("integer");
-
-                    NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("Id"));
-
-                    b.Property<string>("Name")
+                    b.Property<string>("Password")
                         .IsRequired()
                         .HasColumnType("text");
 
-                    b.Property<int>("VacancyId")
-                        .HasColumnType("integer");
-
-                    b.Property<int>("Value")
-                        .HasColumnType("integer");
-
                     b.HasKey("Id");
 
-                    b.ToTable("Properties");
+                    b.ToTable("Recruiters");
                 });
 
             modelBuilder.Entity("Resume_Filter.Domain.Entities.Vacancy.Vacancies", b =>
@@ -84,12 +93,12 @@ namespace Resume_Filter.Infrastructure.Migrations
                         .IsRequired()
                         .HasColumnType("text");
 
-                    b.Property<int>("HR_Id")
-                        .HasColumnType("integer");
-
                     b.Property<string>("Name")
                         .IsRequired()
                         .HasColumnType("text");
+
+                    b.Property<int>("RecruiterId")
+                        .HasColumnType("integer");
 
                     b.HasKey("Id");
 

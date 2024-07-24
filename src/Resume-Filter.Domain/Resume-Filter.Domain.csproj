@@ -10,12 +10,10 @@
   <ItemGroup>
     <None Remove="Entities\" />
     <None Remove="Entities\Vacancy\" />
-    <None Remove="Entities\Property\" />
     <None Remove="Entities\HR\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Entities\Vacancy\" />
-    <Folder Include="Entities\Property\" />
     <Folder Include="Entities\HR\" />
   </ItemGroup>
 </Project>

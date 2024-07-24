@@ -78,29 +78,6 @@ namespace Resume_Filter.Infrastructure.Migrations
                     b.ToTable("Recruiters");
                 });
 
-            modelBuilder.Entity("Resume_Filter.Domain.Entities.Property.Properties", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("integer");
-
-                    NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("Id"));
-
-                    b.Property<string>("Name")
-                        .IsRequired()
-                        .HasColumnType("text");
-
-                    b.Property<int>("VacancyId")
-                        .HasColumnType("integer");
-
-                    b.Property<int>("Value")
-                        .HasColumnType("integer");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("Properties");
-                });
-
             modelBuilder.Entity("Resume_Filter.Domain.Entities.Vacancy.Vacancies", b =>
                 {
                     b.Property<int>("Id")
