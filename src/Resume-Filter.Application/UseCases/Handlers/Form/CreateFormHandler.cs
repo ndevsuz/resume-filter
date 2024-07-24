@@ -66,9 +66,10 @@ Return the result as a JSON object with the following structure(if no info prope
   ""IsAccepted"": true // or false
 }
 ";
-            var gptForm = JsonConvert.DeserializeObject<Forms>(await GPTHelper.SendRequest(gptrequest));
+            var response = await GPTHelper.SendRequest(gptrequest);
+            var gptForm = JsonConvert.DeserializeObject<Forms>(response);
             form.Match = gptForm.Match;
-            form.MatchingSkills = "gptForm.MatchingSkills";
+            form.MatchingSkills = gptForm.MatchingSkills;
             form.IsAccepted = gptForm.IsAccepted;
             await _applicationDbContext.Forms.AddAsync(form);
             var result = await _applicationDbContext.SaveChangesAsync(cancellationToken);
