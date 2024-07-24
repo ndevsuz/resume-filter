@@ -40,6 +40,7 @@ public class CreateFormHandler:IRequestHandler<CreateForm, bool>
                 uniqueFileName = Guid.NewGuid().ToString() + "_" + request.Resume.FileName;
                 imageFilePath = Path.Combine(UploadFolder, uniqueFileName);
                 request.Resume.CopyTo(new FileStream(imageFilePath, FileMode.Create));
+                form.Resume = imageFilePath;
             }
 
             var gptrequest = @$"
@@ -67,7 +68,7 @@ Return the result as a JSON object with the following structure(if no info prope
 ";
             var gptForm = JsonConvert.DeserializeObject<Forms>(await GPTHelper.SendRequest(gptrequest));
             form.Match = gptForm.Match;
-            form.MatchingSkills = gptForm.MatchingSkills;
+            form.MatchingSkills = "gptForm.MatchingSkills";
             form.IsAccepted = gptForm.IsAccepted;
             await _applicationDbContext.Forms.AddAsync(form);
             var result = await _applicationDbContext.SaveChangesAsync(cancellationToken);
