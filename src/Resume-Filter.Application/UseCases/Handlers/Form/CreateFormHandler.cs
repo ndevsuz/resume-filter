@@ -46,7 +46,7 @@ public class CreateFormHandler:IRequestHandler<CreateForm, bool>
 I have the following resume text and vacancy requirements. Please analyze the resume against the vacancy requirements and return a JSON object with the matching skills, match percentage, and whether the user is accepted or not.
 
 **Resume:**
-{FileHelper.ExtractTextFromPdf(form.Resume)}
+{FileHelper.ExtractTextFromPdf(imageFilePath)}
 
 **Vacancy:**
 {JsonConvert.SerializeObject(await _applicationDbContext.Vacancies.FirstOrDefaultAsync(v => v.Id == form.VacancyId))}
